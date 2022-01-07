@@ -98,7 +98,12 @@ const Navbar = () => {
       justify="center"
       padding="5px 5px"
     >
-      <Row justify="space-between" width="100%" maxWidth="1250px">
+      <Row
+        justify="space-between"
+        width="100%"
+        maxWidth="1250px"
+        margin="0 15px 0 0"
+      >
         <Image src={logo} height="60px" />
         <Row mgap="0 20px 0 0">
           <Row className="navbar-item" mgap="0 10px 0 0">

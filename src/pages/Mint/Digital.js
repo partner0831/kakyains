@@ -3,20 +3,31 @@ import { Col, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
 import { Image } from "../../components/Image";
 import { DigitalView } from "../../style/Mint/style";
-import mobileImg from "../../assets/images/mobile.png";
+import mobileImg from "../../assets/images/fourth.png";
 
 const Digital = () => {
   return (
     <DigitalView>
       <Col align="center">
         <div className="dotborder"></div>
-        <Row maxWidth="1200px" align="flex-start" className="digital_container">
-          <Image src={mobileImg} maxWidth="400px" width="100%" />
+        <Row
+          maxWidth="1200px"
+          align="flex-start"
+          className="digital_container"
+          margin="30px 0 0"
+        >
+          <Image
+            src={mobileImg}
+            maxWidth="220px"
+            height="300px"
+            width="100%"
+            border="8px solid #dfe0e0"
+            borderRadius="20px"
+          />
           <Col>
             <Text
               fontSize="55px"
               fontWeight="bold"
-              margin="30px 0 0"
               className="digital_header"
               wordBreak="break-word"
               width="100%"

@@ -33,7 +33,6 @@ const Overview = () => {
   return (
     <OverviewSection id="gallery">
       <Col align="center" margin="30px 0 0">
-        {/* <Image src={line} width="95%" /> */}
         <div className="dotborder"></div>
 
         <Row
@@ -114,7 +113,7 @@ const Overview = () => {
             border="8px solid #dfe0e0"
             borderRadius="20px"
             src={Elon2}
-            maxWidth="260px"
+            maxWidth="220px"
             height="300px"
             width="100%"
           />
