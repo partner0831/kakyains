@@ -15,6 +15,7 @@ const Digital = () => {
           align="flex-start"
           className="digital_container"
           margin="30px 0 0"
+          padding="0 20px"
         >
           <Image
             src={mobileImg}
@@ -24,7 +25,7 @@ const Digital = () => {
             border="8px solid #dfe0e0"
             borderRadius="20px"
           />
-          <Col>
+          <Col margin="0 0 10px 0">
             <Text
               fontSize="55px"
               fontWeight="bold"

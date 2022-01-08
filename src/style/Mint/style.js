@@ -13,6 +13,7 @@ injectGlobal`
 ////////////////////////////////////////////////////
 export const StyledHeader = styled.div`
   display: flex;
+  transition: all 0.45s;
   flex-direction: column;
   background: ${(props) => props.background || "none"};
   background-size: cover;
@@ -26,35 +27,27 @@ export const StyledHeader = styled.div`
   }
   .space-img {
   }
+  .header_view {
+    max-width: 1250px;
+  }
   @media screen and (max-width: 1300px) {
-    .header-text {
-      font-size: 50px;
-      line-height: 80px;
+    .header_view {
+      max-width: 1100px;
     }
   }
   @media screen and (max-width: 1150px) {
-    .header-text {
-      font-size: 30px;
-      line-height: 60px;
-    }
-  }
-  @media screen and (max-width: 810px) {
     .header_view {
-      display: flex;
-      align-items: center;
-      flex-direction: column !important;
-      img {
-        width: 180px;
-      }
-    }
-    .header-text {
-      text-align: center;
+      max-width: 1000px;
     }
   }
-  @media screen and (max-width: 500px) {
-    .header-text {
-      font-size: 18px;
-      line-height: 37px;
+  @media screen and (max-width: 1000px) {
+    .header_view {
+      max-width: 850px;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    .header_view {
+      max-width: 700px;
     }
   }
   .date-selector {

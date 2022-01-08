@@ -117,7 +117,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Col align="center">
-        <Row className="header_view" align="flex-start" maxWidth="1250px">
+        <Row className="header_view" align="flex-start">
           <Image src={backImg} width="100%" />
           {/* <Col
         width="100%"
