@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 // @import component
 import { Text } from "../components/Text";
 import { Navbardata } from "../contract/navdata";

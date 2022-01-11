@@ -15,6 +15,7 @@ import Loading from "./components/Loading";
 const AppLayout = React.lazy(() => import("./layout/AppLayout"));
 // @import pages
 const MintPage = React.lazy(() => import("./pages/Mint"));
+const GochaPage = React.lazy(() => import("./pages/Gocha"));
 
 function App() {
   const [provider, setProvider] = useState(null);
@@ -74,14 +75,17 @@ function App() {
       <Suspense fallback={<Loading />}>
         <Router>
           <Switch>
-            <Route
-              path={`/`}
-              render={(props) => (
-                <AppLayout>
-                  <MintPage {...props} />
-                </AppLayout>
-              )}
-            />
+            <Route exact path="/">
+              <AppLayout>
+                <MintPage />
+              </AppLayout>
+            </Route>
+
+            <Route exact path="/gocha">
+              <AppLayout>
+                <GochaPage />
+              </AppLayout>
+            </Route>
           </Switch>
         </Router>
       </Suspense>
