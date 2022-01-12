@@ -7,8 +7,41 @@ export const StyledGocha = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 0 20px;
+  @media screen and (max-width: 775px) {
+    .gocha_header {
+      font-size: 40px;
+    }
+    .gocha_view {
+      padding: 15px;
+      max-width: 350px;
+    }
+    .gocha_image {
+      width: 150px;
+      height: 200px;
+    }
+    .gocha_select {
+      flex-direction: column;
+      & > *:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    .gocha_play {
+      font-size: 35px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .gocha_header {
+      font-size: 30px;
+    }
+    .gocha_image {
+      width: 100px;
+      height: 150px;
+    }
+    .gocha_play {
+      font-size: 30px;
+    }
+  }
 `;
 export const SocialGocha = styled.div`
   background-color: white;

@@ -23,7 +23,7 @@ const Gocha = () => {
         margin="30px 0 0 0"
         fontSize="55px"
         padding="0 40px"
-        className="overview_header"
+        className="gocha_header"
         wordBreak="break-word"
         fontFamily="horizon"
         align="center"
@@ -36,6 +36,7 @@ const Gocha = () => {
         borderRadius="50px"
         backgroundColor="#364C77E9"
         margin="40px 0 20px 0"
+        className="gocha_view"
       >
         <Row
           justify="center"
@@ -69,7 +70,12 @@ const Gocha = () => {
               <BsFillMicMuteFill color="#1E314E" size={25} />
             )}
           </SocialGocha>
-          <Image width="180px" height="280px" src={gochaImg} />
+          <Image
+            width="180px"
+            height="280px"
+            src={gochaImg}
+            className="gocha_image"
+          />
         </Row>
         <Row
           boxShadow="0 -3px 0 #19dac3"
@@ -96,6 +102,7 @@ const Gocha = () => {
           justify="space-between"
           width="100%"
           align="center"
+          className="gocha_select"
         >
           <Row mgap="0 10px 0 0">
             <SocialGocha onClick={() => setCount(1)}>
@@ -136,13 +143,9 @@ const Gocha = () => {
             padding="8px 20px"
             justify="flex-start"
             width="180px"
+            align="center"
           >
-            <Text
-              fontSize="16px"
-              margin="0 0 0 10px"
-              fontWeight="400"
-              fontFamily="Mitr"
-            >
+            <Text fontSize="16px" fontWeight="400" fontFamily="Mitr">
               TOTAL = {0.1 * count} ETH
             </Text>
           </Row>
@@ -157,6 +160,7 @@ const Gocha = () => {
               fontFamily="Mitr"
               color="#1E314E"
               align="center"
+              className="gocha_play"
             >
               PLAY!
             </Text>
