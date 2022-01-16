@@ -1,5 +1,5 @@
 export const Navbardata = [
-  "BUY AN APE",
+  "GOCHA",
   "ROADMAP",
   "TEAM",
   "GALLERY",

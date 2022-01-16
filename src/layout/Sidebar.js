@@ -8,7 +8,7 @@ import { theme } from "../theme";
 import logo from "../assets/images/logo.gif";
 import { Col, Row } from "../components/Layout";
 
-const RenderItem = ({ selected, name, onSelected }) => {
+const RenderItem = ({ selected, name, onSelected, link }) => {
   return (
     <Col align="center">
       <LinkItem
@@ -17,7 +17,7 @@ const RenderItem = ({ selected, name, onSelected }) => {
             ? true
             : false
         }
-        href={`#${name.toString().toLowerCase()}`}
+        href={link ? `${link}` : `#${name.toString().toLowerCase()}`}
         onClick={() => {
           onSelected(`${name.toString().toLowerCase()}`);
         }}
@@ -62,14 +62,27 @@ const Sidebar = ({ menushow, menuRef }) => {
             <LogoIMG src={logo} />
           </Row>
           {Navbardata.map((item, key) => {
-            return (
-              <RenderItem
-                key={key + 1}
-                selected={selected}
-                name={item}
-                onSelected={setSelected}
-              />
-            );
+            console.log(item);
+            if (item === "GOCHA") {
+              return (
+                <RenderItem
+                  key={key + 1}
+                  selected={selected}
+                  name={item}
+                  onSelected={setSelected}
+                  link="/gocha"
+                />
+              );
+            } else {
+              return (
+                <RenderItem
+                  key={key + 1}
+                  selected={selected}
+                  name={item}
+                  onSelected={setSelected}
+                />
+              );
+            }
           })}
         </div>
       </StyledSidebar>

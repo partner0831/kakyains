@@ -17,7 +17,7 @@ import { BarView } from "./style";
 
 import Sidebar from "./Sidebar";
 
-const RenderItem = ({ selected, name, onSelected }) => {
+const RenderItem = ({ selected, name, onSelected, link }) => {
   return (
     <LinkItem
       sel={
@@ -25,7 +25,7 @@ const RenderItem = ({ selected, name, onSelected }) => {
           ? true
           : false
       }
-      href={`#${name.toString().toLowerCase()}`}
+      href={link ? `${link}` : `#${name.toString().toLowerCase()}`}
       onClick={() => {
         onSelected(`${name.toString().toLowerCase()}`);
       }}
@@ -92,14 +92,27 @@ const Navbar = () => {
           <Row mgap="0 20px 0 0">
             <Row className="navbar-item" mgap="0 10px 0 0">
               {Navbardata.map((item, key) => {
-                return (
-                  <RenderItem
-                    key={key + 1}
-                    selected={selected}
-                    name={item}
-                    onSelected={setSelected}
-                  />
-                );
+                console.log(item);
+                if (item === "GOCHA") {
+                  return (
+                    <RenderItem
+                      key={key + 1}
+                      selected={selected}
+                      name={item}
+                      onSelected={setSelected}
+                      link="/gocha"
+                    />
+                  );
+                } else {
+                  return (
+                    <RenderItem
+                      key={key + 1}
+                      selected={selected}
+                      name={item}
+                      onSelected={setSelected}
+                    />
+                  );
+                }
               })}
             </Row>
             <Row mgap="0 15px 0 0" className="social_icons">
